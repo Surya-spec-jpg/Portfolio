@@ -1,0 +1,306 @@
+    /* Reset default margin and padding */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Body and general styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    /* Navbar Styling */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0px 0px 10px 10px;
+        align-items: center;
+        padding: 30px 20px;
+        background-color: #284b63;
+        width: 100%;
+        position: relative;
+        top: 0; /* Keep navbar fixed to the top */
+        left: 0;
+        z-index: 1000; /* Ensure navbar stays on top of other content */
+        transition: all 0.3s;
+    }
+    
+    .navbar .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        margin-right: 20px;
+    }
+    .navbar .logo img {
+        height: 90px;    /* Adjust size as needed */
+        width: auto;
+        vertical-align: middle;
+      }
+      
+    
+    .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .nav-links li {
+        list-style-type: none;
+    }
+    
+    .nav-links a {
+        color: white;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+        color: #eef0eb;
+    }
+    
+    button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+    
+    button:hover {
+        color: #eef0eb;
+    }
+    
+    /* Hero Section Styling */
+    #hero {
+        padding: 120px 20px 20px; /* Top padding for spacing */
+        margin-top: 20px; /* Added margin to give space below the fixed navbar */
+        text-align: center;
+        background: #eef0eb;
+        color: black;
+        border-radius: 20px;
+    }
+    
+    #hero .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    #hero .hero-content p {
+        font-size: 1.5rem;
+    }
+    
+    /* Section Styling */
+    section {
+        padding: 80px 20px;
+    }
+    #about {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    ul {
+        list-style-type: disc;
+        padding: 0;
+        margin-left: 20px;
+    }
+    
+    ul li {
+        margin: 10px 0;
+    }
+    
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 20px;
+    }
+    
+    .project {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+    
+    .project a {
+        color: #fff;
+        background-color: #0066cc;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0; /* Centers the button */
+        text-align: center;
+        transition: background-color 0.3s;
+    }
+    
+    .project a:hover {
+        background-color: #004c99;
+        text-decoration: none;
+    }
+    
+    
+    footer {
+        background-color: #222;
+        border-radius: 10px 10px 0px 0px;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid #ddd;
+        margin-top: 40px;
+    }
+    
+    /* Dark Mode Styles */
+    body.dark-mode {
+        background-color: #121212;
+        color: white;
+    }
+    
+    body.dark-mode .navbar {
+        background-color: #284b63;
+    }
+    
+    body.dark-mode .nav-links a {
+        color: white;
+    }
+    
+    body.dark-mode footer {
+        background-color: #333;
+    }
+    
+    body.dark-mode #hero {
+        background-color: #333;
+        color: white;
+    }
+    body.dark-mode .project {
+        background-color: #1e1e1e;
+        color: white;
+        border-color: #444;
+    }
+
+    /* Skills Section */
+    #skills {
+        padding: 60px 20px;
+        text-align: center;
+    }
+    
+    #skills h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #284b63;
+    }
+    
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .skill-card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        font-weight: 600;
+        color: #284b63;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        cursor: not-allowed;
+    }
+    
+    /* Dark mode support */
+    body.dark-mode .skill-card {
+        background: #333;
+        color: white;
+    }
+    
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .nav-links {
+        display: none;
+        }
+    
+        .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        }
+    
+        button {
+        margin-top: 10px;
+        }
+    }
+    /* Contact Me Section Styling */
+    #contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Align items vertically */
+        text-align: center;
+        padding: 80px 20px;
+    }
+    
+    #contact h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    #contact p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    /* General Link Styling */
+    a {
+        color: #0066cc; /* Professional blue color */
+        transition: color 0.3s ease; /* Smooth transition for color change */
+    }
+    
+    a:hover {
+        color: #cad2c5; /* Change to yellow when hovering */
+    }
+        /* Resume Download Button Styling */
+    .download-resume {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .download-btn {
+        font-family:  'Poppins', sans-serif;
+        background-color: #0066cc;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .download-btn:hover {
+        background-color: #004a99;
+        transform: scale(1.05);
+    }
